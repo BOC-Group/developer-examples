@@ -29,7 +29,7 @@ import org.apache.http.util.EntityUtils;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 public class AuthRESTClient {
-	private static final String CONNECTION_PATH = "http://localhost:8080/ADOxxWeb/rest/connection/auth";
+	private static final String CONNECTION_PATH = "http://localhost:8080/rest/connection/auth";
 
 	public static void main(final String[] args) throws ClientProtocolException,
 		IOException,
@@ -42,7 +42,7 @@ public class AuthRESTClient {
 			final String sDate = String.valueOf(nDate);
 			final String sGUID = UUID.randomUUID().toString();
 			final String sIdentifier = "boc.rest.key.mfb.StandardRESTfulServices";
-			final String sSecret = "2edb376a-88d7-4564-a4cb-9fcdd005c8179427ccbd-89eb-45ea-a3ed-69f0d7c38e94f723beea-f2bc-4007-a238-8d9a0c88f8ed22365ab7-ff76-440b-99f8-1dc862e1607d3b2c7138-cba5-4a1e-9a66-00595b2524206ffa0893-4d41-4ba5-a43a-e15b5c9292713b3f066f-2875-4bd0-a49b-a093085c15db1224fc34-6d4d-4c62-a0b1-4aae1dffff6ddb1255c1-ca9a-4d58-9bfd-235c9c9f879869ed9de3-d641-4425-85d2-6f0c7a5d162407be6866-cd04-4fb9-b132-116321cec844ac27c950-ba19-4018-bd93- 38ce70f3ea1c60aae62c-e620-4762-a7a0-39d7f0b6c677176cc895-04c6-4d44-8767-4277ee315cfcbed1341f";
+			final String sSecret = "";
 
 			aMethod.addHeader("x-axw-rest-identifier", sIdentifier);
 			aMethod.addHeader("x-axw-rest-timestamp", sDate);
