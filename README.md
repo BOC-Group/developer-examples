@@ -1,18 +1,19 @@
-# rest-examples
-Examples on how to use and integrate with the rest API of the BOC Group products ADONIS, ADOIT and GRC.
 # Introduction
+The following chapters present coding examples how to use REST APIs of our BOC Group Products. The code snippets can be used as part of our products to retrieve data or to perform a query within our tools.
+Please note that this documentation does not comprise information about API endpoints.
+
 BOC Group products ADONIS, ADOIT and GRC provide REST capabilities to call various functionality to create, read, update and delete data. As such, all incoming REST calls need to be authenticated to ensure security.
 
-REST authentication in ADOxx can be done in two ways:
+REST authentication in ADOxx can be done in three ways:
 
 * Token Based authentication
 * Basic authentication
 * OAuth 2.0 Authentication
 
 These three authentication mechanisms are described below in more detail.
-# Basic Authentication
+## Basic Authentication
 Basic Authentication is done by sending a header with the REST request which contains the username and password of an BOC Group product user.
-## Authentication Details
+### Authentication Details
 The header's name is **Authorization**, the header's value has to have the format **Basic <encodeBase64(username:password)>.**
 Usernames that contain a colon are not supported.
 
@@ -28,35 +29,27 @@ Usernames that contain a colon are not supported.
     aMethod.addHeader ("Authorization", "Basic " + DatatypeConverter.printBase64Binary (sUnencodedToken.getBytes ()));
     ...
 The REST request will then be done in the context of the user that is identified by provided username. This user's rights will be applied when accessing or manipulating data.
-## Enabling Basic Authentication
+### Enabling Basic Authentication
 To enable Basic Authentication, several steps have to be done:
 
 * Basic Authentication has to be allowed in BOC Group Products
 * The endpoint implementation has to support Basic Authentication
-### Configure Basic Authentication in BOC Group Products
+#### Configure Basic Authentication in BOC Group Products
 To configure Basic Authentication in BOC Group Products, the file **RESTAuthorization.xml** on the web server in the directory **WEB-INF/registry/rest** has to be edited and the entry with key **REST_BASIC_AUTHENTICATION** has to be set to true:
 
     <properties>
       ... 
       <entry key="REST_BASIC_AUTHENTICATION">true</entry>
     </properties>
-### Configure Basic Authentication in the Standard RESTful Services
-The Standard RESTful Services provided with BOC Group Products also have to be configured separately to support Basic Authentication.
-
-To do this, in the configuration user interface for the Standard RESTful Services, in the tab **Basic Auth**, the check box for basic authentication has to be checked and the scenarios that should be made available using this authentication type have to be selected:
-
-*Image still to be selected*
-# OAuth 2.0 Authentication
+#### Configure Basic Authentication in the Standard RESTful Services
+For details please refer to the corresponding manuals of our BOC Group Products.
+## OAuth 2.0 Authentication
 OAuth 2.0 Authentication is done by first retrieving a token from the server which can then be sent in the Authorization header to gain access to the desired resource. For details on how to activate OAuth 2.0, how to register a client for it and how to use OAuth 2.0 authentication in your own APIs, refer to [OAuth 2.0](https://oauth.net/2/).
-## Configure OAuth 2.0 Authentication in the Standard RESTful Services
-The Standard RESTful Services provided with BOC Group Products also have to be configured separately to support OAuth 2.0 Authentication.
-
-To do this, in the configuration user interface for the Standard RESTful Services, in the tab **OAuth**, the checkbox for OAuth authentication has to be checked and the scenarios that should be made available using this authentication type have to be selected:
-
-*Image still to be selected*
-# Token Based Authentication
+### Configure OAuth 2.0 Authentication in the Standard RESTful Services
+For details please refer to the corresponding manuals of our BOC Group Products.
+## Token Based Authentication
 Token Based authentication in BOC Group Products is done using a security hash which is constructed from a public identifier of the client, a secret key of the client, a GUID and a timestamp of the request. This prevents that the REST functionality is used by unauthorized clients or that requests could be replayed or abused.
-## Authentication Details
+### Authentication Details
 Each authenticated request to BOC Group Products using REST needs four headers. While by default headers should be used to communicate this relevant information, it is also possible to send this information also using parameters (e.g. if the third party system that needs to be integrated with BOC Group Products does not provide a means to set headers for requests).
 
 * **x-axw-rest-identifier**
@@ -99,9 +92,12 @@ l. Finalize the HMac using the byte array containing all parameters and headers/
 m. Get the resulting byte array of the HMac.
 
 n. Convert the byte array into a Base64 encoded string using UTF-8 encoding.
-## Reference Implementation - Java
-For a java implementation, refer to the BOC Commons library that is part of each product release or to the appendix in the manual **BOC Management Office REST API.pdf**, which is also part of each release.
-## Reference Implementation - PHP
+### Reference Implementation - Java
+The following file shows a sample implementation of a REST client in Java.
+
+In [**auth.java**](https://github.com/BOC-Group/rest-examples/blob/master/java/auth.java) a simple call to the connection endpoint of the REST API that requires authentication is made.
+
+### Reference Implementation - PHP
 The following two files show sample implementations of a REST client in PHP.
 
 In [**auth.php**](https://github.com/BOC-Group/rest-examples/blob/master/php/auth.php) a simple call to the connection endpoint of the REST API that requires authentication is made.
@@ -109,7 +105,7 @@ In [**auth.php**](https://github.com/BOC-Group/rest-examples/blob/master/php/aut
 [**search.php**](https://github.com/BOC-Group/rest-examples/blob/master/php/search.php) shows how to call the search API.
 
 In both cases, adapt the necessary parameters within the files (e.g. %SECRET%, %IDENTIFIER%, %REPO_ID%, %REST_BASE_URL%, %CLASS_NAME%, etc.).
-## Reference Implementation - C#
+### Reference Implementation - C#
 The following example contains a sample implementation that shows how to create the necessary token in C# and send a request in a way that it is understandable by the REST API.
 To make this example work, run the exe and enter your secret and your identifier. Also provide a URL and select the desired request.
 It is possible to send parametrized post requests, the parameters need to be entered as KEY:VALUE pairs in the text box. For each new KEY:VALUE pair, a new line has to be started.
@@ -123,7 +119,7 @@ In [**Auth.cs**](https://github.com/BOC-Group/rest-examples/blob/master/c%23/Aut
 [**Search.cs**](https://github.com/BOC-Group/rest-examples/blob/master/c%23/Search.cs) shows how to call the search API.
 
 In both cases, adapt the necessary parameters within the files (e.g. %SECRET%, %IDENTIFIER%, %REPO_ID%, %REST_BASE_URL%, %CLASS_NAME%, etc.).
-## Reference Implementation - NodeJS
+### Reference Implementation - NodeJS
 The following two files show sample implementations of a REST client in NodeJS.
 
 In [**rest_auth.js**](https://github.com/BOC-Group/rest-examples/blob/master/nodejs/rest_auth.js) a simple call to the connection endpoint of the REST API that requires authentication is made.
