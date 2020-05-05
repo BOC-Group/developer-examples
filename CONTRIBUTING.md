@@ -8,6 +8,7 @@ It is important that bugs contain a clear **description** of the error including
 
 In addition to this, the following information can be helpful:
 * Proper title to see what is the problem at first glance
+* Product (ADONIS, ADOIT)
 * Affected version
 * Which browser was used (especially when it is just reproducible with one browser)
 * Log files
