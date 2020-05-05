@@ -12,5 +12,4 @@ In addition to this, the following information can be helpful:
 * Affected version
 * Which browser was used (especially when it is just reproducible with one browser)
 * Log files
-* Screen shots/-movie (of the whole browser and not just a snippet where information could be missing e.g. which class/scenario was used)
 * Reproduction data (library, models/objects, migration package, configuration, mfb...)
