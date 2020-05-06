@@ -1,5 +1,5 @@
 # Introduction
-The source reposiotry contains coding examples how to access the REST APIs of our BOC Group Products. The code snippets can be used as starting point to retrieve data or to perform a query within our products.
+The source repository contains coding examples how to access the REST APIs of our BOC Group Products. The code snippets can be used as starting point to retrieve data or to perform a query within our products.
 Please note that this documentation does not contain detailed information about the REST API endpoints. This documentation is part of BOC Group product delivery.
 
 BOC Group products ADONIS, ADOIT and GRC provide REST capabilities to call various functionality to create, read, update and delete data. As such, all incoming REST calls need to be authenticated to ensure security.
