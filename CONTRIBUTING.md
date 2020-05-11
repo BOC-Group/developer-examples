@@ -19,7 +19,7 @@ First of all, please ensure always that the issue was not already reported by se
 Please describe your issue as detailed as possible. You should also explain why you need an answer to this question.
 
 ### Requests for further coding examples
-Send an e-mail to development@boc-group.com. Let us know if you want to extend your code with further examples. It is also possible to request other programming languages than those offered in our public repository.
+Let us know if you want to extend your code with further examples. It is also possible to request other programming languages than those offered in our public repository.
 
 ### Reporting a bug or a security incident
 #### What is a bug?
