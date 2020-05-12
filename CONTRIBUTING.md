@@ -25,11 +25,11 @@ Let us know if you want to extend your code with further examples. It is also po
 #### What is a bug?
 Bugs are defects in the software that are not working as expected. This can also be performance issues.
 #### How to report bugs?
-It is important that bugs contain a clear **description** of the error including a guide and/or code snippet on **how to reproduce** the issue (if possible).
+It is important that bugs contain a clear **description** of the error including the **code snippet** that was used to do the request.
 
 In addition to this, the following information can be helpful:
 * Proper title to see what is the problem at first glance
 * Product (ADONIS, ADOIT)
 * Affected product version (can be found e.g. on login screen)
 * Log files (e.g. SIP, Web server logs folder: <Apache Tomcat installation directory>\logs)
-* Reproduction data (library, models/objects, migration package, configuration, mfb...)
+* Reproduction data (library, SIP, the "RESTAuthorization" xml file from WEB-INF/registry/rest) or at least the REST component settings (if the other files are too big) 
