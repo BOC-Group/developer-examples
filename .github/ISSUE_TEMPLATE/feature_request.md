@@ -1,7 +1,7 @@
 ---
 name: Feature request
 about: Request further coding examples or other programming languages
-title: "[Feature]"
+title: "[Request]"
 labels: ''
 assignees: ''
 
