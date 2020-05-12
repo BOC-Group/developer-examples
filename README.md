@@ -110,8 +110,6 @@ The following example contains a sample implementation that shows how to create 
 To make this example work, run the exe and enter your secret and your identifier. Also provide a URL and select the desired request.
 It is possible to send parametrized post requests, the parameters need to be entered as KEY:VALUE pairs in the text box. For each new KEY:VALUE pair, a new line has to be started.
 
-*File still to be selected*
-
 These two examples contain simple C# code that can be executed e.g. in Visual Studio Code.
 
 In [**Auth.cs**](https://github.com/BOC-Group/rest-examples/blob/master/c%23/Auth.cs) a simple call to the connection endpoint of the REST API that requires authentication is made.
