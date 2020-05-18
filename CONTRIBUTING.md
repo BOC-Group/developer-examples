@@ -6,12 +6,12 @@ For issues regarding the integration code of our products, please follow this gu
 
 ## Contributing your own coding examples to our repository
 If you'd like to add your own code to our project repository, don't hesitate to create a pull request.
-For easy maintenance, readable code, simple modification, please read and apply the concept of [Clean Code by Robert C. Martin](https://www.oreilly.com/library/view/clean-code/9780136083238/chapter01.html).
+We recommend to follow the concept of [Clean Code by Robert C. Martin](https://www.oreilly.com/library/view/clean-code/9780136083238/chapter01.html).
 
 ## Issue reporting
 You can use our issue reporting for the following event types:
-* Questions
-* Requests (e.g. for further coding examples), bugs/problems and security incidents
+* [Questions](https://github.com/BOC-Group/rest-examples/issues/new?assignees=&labels=question&template=question.md&title=%5BQuestion%5D)
+* [Requests](https://github.com/BOC-Group/rest-examples/issues/new?assignees=&labels=&template=feature_request.md&title=%5BRequest%5D) (e.g. for further coding examples), [bugs/problems and security incidents](https://github.com/BOC-Group/rest-examples/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5BBug%5D)
 
 First of all, please ensure always that the issue was not already reported by searching on GitHub under Issues.
 
@@ -25,11 +25,4 @@ Let us know if you want to extend your code with further examples. It is also po
 #### What is a bug?
 Bugs are defects in the software that are not working as expected. This can also be performance issues.
 #### How to report bugs?
-It is important that bugs contain a clear **description** of the error including the **code snippet** that was used to do the request.
-
-In addition to this, the following information can be helpful:
-* Proper title to see what is the problem at first glance
-* Product (ADONIS, ADOIT)
-* Affected product version (can be found e.g. on login screen)
-* Log files (e.g. SIP, Web server logs folder: <Apache Tomcat installation directory>\logs)
-* Reproduction data (library, SIP, the "RESTAuthorization" xml file from WEB-INF/registry/rest) or at least the REST component settings (if the other files are too big) 
+Please report your bug or security incident [here](https://github.com/BOC-Group/rest-examples/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5BBug%5D). It is important that bugs contain a clear **description** of the error including the **code snippet** that was used to do the request.
