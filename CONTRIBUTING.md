@@ -16,10 +16,10 @@ You can use our issue reporting for the following event types:
 First of all, please ensure always that the issue was not already reported by searching on GitHub under Issues.
 
 ### Questions
-Please describe your issue as detailed as possible. You should also explain why you need an answer to this question.
+Please describe [your issue](https://github.com/BOC-Group/rest-examples/issues/new?assignees=&labels=question&template=question.md&title=%5BQuestion%5D) as detailed as possible. You should also explain why you need an answer to this question.
 
 ### Requests for further coding examples
-Let us know if you want to extend your code with further examples. It is also possible to request other programming languages than those offered in our public repository.
+Let us know if you want to extend your code with [further examples](https://github.com/BOC-Group/rest-examples/issues/new?assignees=&labels=&template=feature_request.md&title=%5BRequest%5D). It is also possible to request [other programming languages](https://github.com/BOC-Group/rest-examples/issues/new?assignees=&labels=&template=feature_request.md&title=%5BRequest%5D) than those offered in our public repository.
 
 ### Reporting a bug or a security incident
 #### What is a bug?
