@@ -93,9 +93,76 @@ m. Get the resulting byte array of the HMac.
 
 n. Convert the byte array into a Base64 encoded string using UTF-8 encoding.
 ### Reference Implementation - Java
-The following file shows a sample implementation of a REST client in Java.
+The following files shows a sample implementation of a REST client in Java.
 
-In [**auth.java**](https://github.com/BOC-Group/rest-examples/blob/master/java/auth.java) a simple call to the connection endpoint of the REST API that requires authentication is made.
+#### Authenticated REST call
+
+In [**auth.java**](https://github.com/BOC-Group/rest-examples/blob/master/java/auth.java) a simple call to the connection endpoint of the REST API that requires authentication is made which is available at ../rest/connection/auth (e.g. http://localhost:8080/ADOxxWeb/rest/connection/auth)
+
+Running this example should provide a response similar to the following:
+
+```
+Response From RESTful service: 
+Authorized Access Granted @ Mon Feb 10 16:54:40 CET 2014
+```
+
+Necessary Libraries:
+
+The following libraries are required for this sample implementation:
+
+* httpcore and httpclient: https://hc.apache.org/downloads.cgi
+* commons-logging: https://commons.apache.org/proper/commons-logging/download_logging.cgi
+* commons-codec: https://commons.apache.org/proper/commons-codec/download_codec.cgi
+* bcprov-jdk: https://www.bouncycastle.org/latest_releases.html
+
+#### Programmatic Access
+
+Programmatic access to an available RESTful service can be established using any programming language providing the required API to access an HTTP or HTTPS URL.
+
+The simplest way of consuming a RESTful service is by using an HTTP GET request (provided that the service is implemented to respond to HTTP GET requests). When using HTTP GET, parameters will simply be added to the URL.
+
+[**programmaticAccess.java**](https://github.com/BOC-Group/rest-examples/blob/master/java/programmaticAccess.java) shows a basic example of accessing the public (no authentication required) connection test service with a small Java program. In this example, the service does not require any parameters.
+
+Running this example should provide a response similar to the following:
+
+```
+From RESTful service:
+REST Connection Service Evaluation invoked @ Mon Feb 10 16:10:33 CET 2014
+```
+
+#### Using HTTP POST
+
+The examples so far showed how to access RESTful services using HTTP GET. Very often (usually when data needs to manipulated using a RESTful service), access is made using HTTP POST. In this case, the parameters sent with the request will not be part of the service URL but rather transported inside a form with the request.
+
+The [**httpPost.java**](https://github.com/BOC-Group/rest-examples/blob/master/java/httpPost.java) code shows a simplified example of how to achieve this. In this example it is assumed that a service is available at http://localhost:8080/ADOxxWeb/rest/hello which can handle HTTP POST requests and requires the parameter “hello_param”.
+
+#### Using HTTP POST to Create a New User
+
+The [**httpPostCreateUser.java**](https://github.com/BOC-Group/rest-examples/blob/master/java/httpPostCreateUser.java) code shows how to create a user using HTTP POST.
+
+#### Using HTTP GET to Get Model Data
+
+The [**httpGetModelData.java**](https://github.com/BOC-Group/rest-examples/blob/master/java/httpGetModelData.java) is a basic example of accessing the name and description of a model with the specified ID using a small Java program.
+
+#### Using HTTP POST to Create a New Object
+
+The [**httpPostCreateObject.java**](https://github.com/BOC-Group/rest-examples/blob/master/java/httpPostCreateObject.java) code shows how to create a new object using HTTP POST. The object is created in the repository with the passed ID and the passed attributes contained in the variable aCreationParams are set. Replace repository ID, key, secret, classname and attribute names and values with data fitting your scenario.
+
+#### Using HTTP PATCH to Update an Existing Object
+
+The [**httpPostUpdateObject.java**](https://github.com/BOC-Group/rest-examples/blob/master/java/httpPostUpdateObject.java) code shows how to update an existing object using HTTP PATCH. The object is identified by the ID provided in the request URL and the attributes passed in the variable aUpdateParams are set. Replace repository ID, object ID, key, secret, attribute name and value with data fitting your scenario.
+
+#### Using HTTP POST to create a Relation between two Existing Objects
+
+The [**httpCreateRel.java**](https://github.com/BOC-Group/rest-examples/blob/master/java/httpCreateRel.java) code shows how to create a relation between two existing objects using HTTP POST. The first object is identified by the ID provided in the request URL, the relation direction is identified by the keyword "outgoing" in the request URL and the relation class is identified by the relation class name within the request URL. The ID of the second object is contained as "toId" in the variable aRelationParams. Replace repository ID, object ID, toId, relation class, relation direction, key and secret with data fitting your scenario.
+
+#### Using HTTP GET for search endpoint to find C_APPLICATION class with token auth
+
+The [**httpGetClassInfo.java**](https://github.com/BOC-Group/rest-examples/blob/master/java/httpGetClassInfo.java) code show how to use search endpoint for retrieving objects of C_APPLICATION class using token authentication
+
+#### Using HTTP GET for getting object data with basic auth
+
+The [**httpGetObjectData.java**](https://github.com/BOC-Group/rest-examples/blob/master/java/httpGetObjectData.java) code show how to get object data from repository using basic auth authentication method.
 
 ### Reference Implementation - PHP
 The following two files show sample implementations of a REST client in PHP.
