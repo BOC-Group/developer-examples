@@ -119,6 +119,6 @@ public class AuthRESTClient {
 				}
 			}
 			final byte[] aResult = aHmac.doFinal(aAllParamsArray);
-			return new String(Base64.encodeBase64(aResult), "UTF-8");
+			return new String(Base64.getEncoder().encode(aResult), "UTF-8");
 		}
 }
