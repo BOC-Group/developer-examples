@@ -37,7 +37,7 @@ public class GetSearchForProcessModels
     final String sKey = "<KEY>";
     final String sSecret = "<SECRET>";
     final String sRepoID = "<REPO_ID>";
-    String sPath = "http://localhost:8500/ADOIT13_0/rest/2.0/repos/" + sRepoID + "/search?";
+    String sPath = "http://<HOST>:<PORT>/ADONIS/rest/2.0/repos/" + sRepoID + "/search?";
     
     final Map <String, String []> aTokenParameters = new HashMap <String, String []> ();
     
