@@ -1,13 +1,8 @@
 package devportal.axx;
 
 import java.io.IOException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.security.NoSuchProviderException;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+
+import javax.xml.bind.DatatypeConverter;
 
 import org.apache.http.StatusLine;
 import org.apache.http.client.ClientProtocolException;
@@ -17,46 +12,27 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-import devportal.Util;
-
 public class GetMetamodelClasses
 {
-  public static void main (final String [] args) throws ClientProtocolException,
-                                                IOException,
-                                                InvalidKeyException,
-                                                NoSuchAlgorithmException,
-                                                NoSuchProviderException
+  public static void main (final String [] args) throws ClientProtocolException, IOException
   {
     final CloseableHttpClient aClient = HttpClients.createDefault ();
     
-    final String sKey = "<KEY>";
-    final String sSecret = "<SECRET>";
+    final String sUser = "<USER>";
+    final String sPass = "<PASSWORD>";
     final String sPath = "http://<HOST>:<PORT>/ADOXX/rest/2.0/metamodel/classes";
     
-    final Map <String, String []> aTokenParameters = new HashMap <String, String []> ();
-    
     final HttpGet aMethod = new HttpGet (sPath);
-    
-    final long nDate = new Date ().getTime ();
-    final String sDate = String.valueOf (nDate);
-    final String sGUID = UUID.randomUUID ().toString ();
-    
-    aMethod.addHeader ("x-axw-rest-identifier", sKey);
-    aMethod.addHeader ("x-axw-rest-timestamp", sDate);
-    aMethod.addHeader ("x-axw-rest-guid", sGUID);
-    
-    aTokenParameters.put ("x-axw-rest-timestamp", new String [] {sDate});
-    aTokenParameters.put ("x-axw-rest-guid", new String [] {sGUID});
-    aTokenParameters.put ("x-axw-rest-identifier", new String [] {sKey});
-    
-    // Construct the token
-    final String sSecurityToken = Util.createSecurityToken (sSecret, aTokenParameters);
-    aMethod.addHeader ("x-axw-rest-token", sSecurityToken);
     
     // The headers controlling the return type and the language do not have to be considered for
     // token generation
     aMethod.addHeader ("Accept", "application/json");
     aMethod.addHeader ("Accept-Language", "en");
+    
+    // Construction of the header to pass the basic authentication information
+    aMethod.addHeader ("Authorization",
+                       "Basic " +
+                           DatatypeConverter.printBase64Binary ((sUser + ":" + sPass).getBytes ()));
     
     final CloseableHttpResponse aResponse = aClient.execute (aMethod);
     
