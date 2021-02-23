@@ -25,7 +25,7 @@ public class GetArtifactData
     final CloseableHttpClient aClient = HttpClients.createDefault ();
     
     final String sUser = "<USER>";
-    final String sPass = "<PASS>";
+    final String sPass = "<PASSWORD>";
     final String sRepoID = "<REPO_ID>";
     final String sArtifactID = "<ARTIFACT_ID>";
     String sPath = "http://<HOST>:<PORT>/ADOIT/rest/2.0/repos/" +
