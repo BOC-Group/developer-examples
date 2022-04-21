@@ -20,6 +20,10 @@ import javax.crypto.spec.SecretKeySpec;
 import org.apache.commons.codec.binary.Base64;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.io.Encoders;
+import io.jsonwebtoken.security.Keys;
+
 public class Util
 {
   public static String createSecurityToken (final String sSecret,
@@ -77,5 +81,12 @@ public class Util
     }
     final byte [] aResult = aHmac.doFinal (aAllParamsArray);
     return new String (Base64.encodeBase64 (aResult), "UTF-8");
+  }
+  
+  public static String generateHMACSecret ()
+  {
+    // Generating a safe HS256 Secret key
+    SecretKey aKey = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+    return Encoders.BASE64.encode(aKey.getEncoded());
   }
 }
