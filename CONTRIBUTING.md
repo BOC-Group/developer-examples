@@ -6,7 +6,7 @@ For issues regarding the integration code of our products, please follow this gu
 
 ## Contributing your own coding examples to our repository
 If you'd like to add your own code to our project repository, don't hesitate to create a pull request.
-We recommend to follow the concept of [Clean Code by Robert C. Martin](https://www.oreilly.com/library/view/clean-code/9780136083238/chapter01.html).
+We recommend to follow the concept of [Clean Code by Robert C. Martin](https://www.oreilly.com/library/view/clean-code-a/9780136083238/).
 
 ## Issue reporting
 You can use our issue reporting for the following event types:
