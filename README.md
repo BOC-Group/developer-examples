@@ -4,6 +4,8 @@ Please note that this documentation does not contain detailed information about 
 
 BOC Group products ADONIS, ADOIT and GRC provide REST capabilities to call various functionality to create, read, update and delete data. As such, all incoming REST calls need to be authenticated to ensure security.
 
+The [REST API Specification](/OpenAPISpec.json) is documented with the standard Open API Specification.
+
 REST authentication in ADOxx can be done in three ways:
 
 * Token Based authentication
