@@ -2,10 +2,10 @@ const axios = require("axios");
 const fs = require("fs").promises;
 const path = require("path");
 
-const USERNAME = "%USERNAME%"; // Replace %USERNAME% with your username.
-const PASSWORD = "%PASSWORD%"; // Replace %PASSWORD% with your password.
-const REPO_ID = "%REPO_ID%"; // Replace %REPO_ID% with your repository's id. (e.g. %{16bcc961-f38b-482a-b056-8691f93e4eb8}% note that {} are optional.)
-const REST_BASE_URL = "%REST_BASE_URL%"; // Replace %REST_BASE_URL% with the path to your web client (e.g. http://server:port/ADOweb).
+const USERNAME = "<USERNAME>"; // Replace <USERNAME> with your username.
+const PASSWORD = "<PASSWORD>"; // Replace <PASSWORD> with your password.
+const REPO_ID = "<REPO_ID>"; // Replace <REPO_ID> with your repository's id. (e.g. {16bcc961-f38b-482a-b056-8691f93e4eb8} note that {} are optional.)
+const REST_BASE_URL = "<REST_BASE_URL>"; // Replace <REST_BASE_URL> with the path to your web client (e.g. http://server:port/ADOweb).
 
 const base64Credentials = Buffer.from(`${USERNAME}:${PASSWORD}`).toString("base64");
 
