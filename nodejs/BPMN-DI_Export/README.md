@@ -4,11 +4,11 @@ This script exports all models from a repository as .bpmn files. It uses the [BP
 
 How to use
 
-- navigate to cloned local directory ( eg. "cd C:\Hg\BPMN-DI_Export")
+- navigate to cloned local directory ( eg. "cd C:\git\BPMN-DI_Export")
 - Install dependencies: `npm install`
 - set up basic auth REST interface, create a local user which shall be used for REST API
 - check if basic auth REST calls work, e.g  GET http://localhost:8080/ADOweb/rest/3.0/repos
-- Edit the variables to suit your current projekt.
+- Edit the variables to suit your current project.
 - adapt query (if necessary) - by default it will query all BPMN diagrams (all modelstates)
 -- user and password
 -- base url
