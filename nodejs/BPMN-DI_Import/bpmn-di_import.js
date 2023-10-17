@@ -2,13 +2,13 @@ const axios = require("axios");
 const fs = require("fs").promises;
 const path = require("path");
 
-const USERNAME = "%USERNAME%"; // Replace %USERNAME% with your username.
-const PASSWORD = "%PASSWORD%"; // Replace %PASSWORD% with your password.
-const REPO_ID = "%REPO_ID%"; // Replace %REPO_ID% with your repository's id. (e.g. %{16bcc961-f38b-482a-b056-8691f93e4eb8}% note that {} are optional.)
-const GROUP_ID = "%GROUP_ID%"; // Replace %GROUP_ID% with the id of the group you want to import into. (e.g. %{ee4729e0-67ef-41e6-96ec-89844f93bea2}% note that {} are optional.)
-const REST_BASE_URL = "%REST_BASE_URL%"; // Replace %REST_BASE_URL% with the path to your web client (e.g. http://server:port/ADOweb).
-const FOLDER_PATH = "%FOLDER_PATH%"; // Replace %FOLDER_PATH% with the path to the folder of your .bpmn files. (e.g. assets\\bpmn)
-const API_VERSION = "2.1"; // Replace %API_VERSION% if needed, default is 2.1
+const USERNAME = "<USERNAME>"; // Replace <USERNAME> with your username.
+const PASSWORD = "<PASSWORD>"; // Replace <PASSWORD> with your password.
+const REPO_ID = "<REPO_ID>"; // Replace <REPO_ID> with your repository's id. (e.g. {16bcc961-f38b-482a-b056-8691f93e4eb8} note that {} are optional.)
+const GROUP_ID = "<GROUP_ID>"; // Replace <GROUP_ID> with the id of the group you want to import into. (e.g. {ee4729e0-67ef-41e6-96ec-89844f93bea2} note that {} are optional.)
+const REST_BASE_URL = "<REST_BASE_URL>"; // Replace <REST_BASE_URL> with the path to your web client (e.g. http://server:port/ADOweb).
+const FOLDER_PATH = "<FOLDER_PATH>"; // Replace <FOLDER_PATH> with the path to the folder of your .bpmn files. (e.g. assets\\bpmn)
+const API_VERSION = "2.1"; // Replace <API_VERSION> if needed, default is 2.1
 
 const restUrl = `${REST_BASE_URL}/rest/${API_VERSION}/repos/${REPO_ID}/modelgroups/${GROUP_ID}/actions?type=import`;
 const base64Credentials = Buffer.from(`${USERNAME}:${PASSWORD}`).toString("base64");
