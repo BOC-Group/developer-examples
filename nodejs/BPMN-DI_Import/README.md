@@ -4,9 +4,9 @@ This script imports a bunch of .bpmn files into ADONIS. It uses the [BPMN DI Res
 
 How to use
 
-- navigate to cloned local directory ( eg. "cd C:\Hg\BPMN-DI_Import")
+- navigate to cloned local directory ( eg. "cd C:\git\BPMN-DI_Import")
 - Install dependencies: `npm install`
-- Edit the variables to suit your current projekt-
+- Edit the variables to suit your current project-
 -- repoid
 -- groupid
 -- user
