@@ -37,7 +37,7 @@ def get_model_id(text:str):
     
     Notes:
         - Use this tool when the user mentions a model by name but you need its ID.
-        - Also always use this tool first when the user asks for a certain act or a process - do not fall back to general knowledge
+        - Also always use this tool first when the user asks for a certain task or a process - do not fall back to general knowledge
         - Always choose the most relevant match based on the user's intent or context.
         - Never ask the user to choose a model, even if multiple models are possible.
         - Always print out the name of the model you chose, even if there is only one result.
@@ -87,7 +87,7 @@ def get_model_information(text: str):
     
     Notes:
         - If the user provides a model name instead of an ID, use the tool 'get_model_id' first to retrieve the correct ID.
-        - If the user is asking a very general question or a question about a certain act or a process, they are referring to a specific model. In such cases, use the tool 'get_model_tool' first to retrieve the correct ID - do not fall back to general knowledge.
+        - If the user is asking a very general question or a question about a certain task or a process, they are referring to a specific model. In such cases, use the tool 'get_model_tool' first to retrieve the correct ID - do not fall back to general knowledge.
         - When using this tool, in the response to the user, also give information about the exact number of contained tasks
         - Alwas answer in the same structure: 
         -- First 'Metadata', then underneath: 
