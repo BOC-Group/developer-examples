@@ -1,0 +1,2154 @@
+{
+  "components": {
+    "examples": {
+      "CreateUser": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:schemas:core:2.0:User\"\n  ],\n  \"userName\" : \"uniqueNames\",\n  \"password\": \"aPassword\",\n  \"ACCOUNT_DISABLED\": false,\n  \"MUST_CHANGE_PASSWORD\": false,\n  \"FORENAME\": \"Forname\",\n  \"SURNAME\": \"surname\",\n  \"EMAIL\": \"uniqueNames@boc.com\",\n  \"TELEPHONE_NUMBER\": \"\",\n  \"DESCRIPTION\": \"\",\n  \"ROOM\": \"\",\n  \"TYPE_OF_OCCUPATION\": \"\",\n  \"FORM_OF_ADDRESS\": \"\",\n  \"repos\": [\n    {\n      \"id\":\"013ece71-7666-48ee-95c5-bd7b71d92ea2\",\n      \"isShared\" : true,\n      \"isAssigned\" : true\n    }\n  ],\n  \"usergroups\": [\n    {\n    \"id\": \"1541862b-8e11-4f0f-8f6c-148b26603750\"\n    }\n  ],\n  \"namedUse\": [\n    {\n    \"id\": \"a09b203e-0333-462b-a7e7-635f962d40ca\"\n    }\n  ],\n  \"roles\": [\n  ]\n}"
+      },
+      "GetRepoJSON": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:ListResponse\"\n  ],\n  \"totalResults\": 2,\n  \"Resources\": [\n    {\n      \"schemas\": [\n        \"urn:boc:scim:schemas:core:2.0:Repo\"\n      ],\n      \"meta\": {\n        \"resourceType\": \"Repo\"\n      },\n      \"id\": \"{013ece71-7666-48ee-95c5-bd7b71d92ea2}\",\n      \"displayName\": \"Standard-Repository\"\n    },\n    {\n      \"schemas\": [\n        \"urn:boc:scim:schemas:core:2.0:Repo\"\n      ],\n      \"meta\": {\n        \"resourceType\": \"Repo\"\n      },\n      \"id\": \"{114cc43a-9f6e-49c3-b8d8-3ee2d25e86b1}\",\n      \"displayName\": \"Just-Another-Repo\"\n    }\n  ]\n}"
+      },
+      "GetRolesJSON": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:ListResponse\"\n  ],\n  \"totalResults\": 13,\n  \"Resources\": [\n    \n    {\n      \"schemas\": [\n        \"urn:boc:scim:schemas:core:2.0:Role\"\n      ],\n      \"meta\": {\n        \"resourceType\": \"Role\"\n      },\n      \"name\": \"001\",\n      \"displayName\": \"001\"\n    },\n    {\n      \"schemas\": [\n        \"urn:boc:scim:schemas:core:2.0:Role\"\n      ],\n      \"meta\": {\n        \"resourceType\": \"Role\"\n      },\n      \"name\": \"ADMIN\",\n      \"mfbID\": \"{3ad30848-5a75-484c-b27c-5ab621932dc9}\",\n      \"displayName\": \"Administrator\"\n    }\n  ]\n}"
+      },
+      "GetUser": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:schemas:core:2.0:User\"\n  ],\n  \"id\": \"{8e4b5b60-7a9f-4e04-9492-2dd95909f351}\",\n  \"meta\": {\n    \"resourceType\": \"User\"\n  },\n  \"userName\": \"aUserNmae\",\n  \"ACCOUNT_DISABLED\": false,\n  \"MUST_CHANGE_PASSWORD\": false,\n  \"FORENAME\": \"Max\",\n  \"SURNAME\": \"Mustermann\",\n  \"EMAIL\": \"\",\n  \"TELEPHONE_NUMBER\": \"\",\n  \"DESCRIPTION\": \"\",\n  \"ROOM\": \"\",\n  \"TYPE_OF_OCCUPATION\": \"\",\n  \"FORM_OF_ADDRESS\": \"\",\n  \"LOGIN_MECHANISM\": \"local\",\n  \"repos\": [],\n  \"groups\": [\n    {\n      \"id\": \"{398ca92e-d342-4511-a6d5-f1310cd1d77c}\"\n    }\n  ],\n  \"namedUseScenarios\": [],\n  \"roles\": []\n}\n"
+      },
+      "GetUsergroupJSON": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:schemas:core:2.0:Group\"\n  ],\n  \"id\": \"{398ca92e-d342-4511-a6d5-f1310cd1d77c}\",\n  \"displayName\": \"test\",\n  \"parentGroupID\": \"{1541862b-8e11-4f0f-8f6c-148b26603750}\",\n  \"members\": [\n    {\n      \"value\": \"{8e4b5b60-7a9f-4e04-9492-2dd95909f351}\",\n      \"type\": \"User\"\n    }\n  ],\n  \"meta\": {\n    \"resourceType\": \"Group\"\n  }\n}"
+      },
+      "ResourceTypesJSON": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:ListResponse\"\n  ],\n  \"totalResults\": 5,\n  \"Resources\": [\n    {\n      \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:ResourceType\"\n      ],\n      \"id\": \"User\",\n      \"name\": \"User\",\n      \"endpoint\": \"/Users\",\n      \"description\": \"User Account\",\n      \"schema\": \"urn:ietf:params:scim:schemas:core:2.0:User\",\n      \"meta\": {\n        \"resourceType\": \"ResourceType\"\n      }\n    },\n    {\n      \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:ResourceType\"\n      ],\n      \"id\": \"Group\",\n      \"name\": \"Group\",\n      \"endpoint\": \"/Groups\",\n      \"description\": \"Group\",\n      \"schema\": \"urn:ietf:params:scim:schemas:core:2.0:Group\",\n      \"meta\": {\n        \"resourceType\": \"ResourceType\"\n      }\n    },\n    {\n      \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:ResourceType\"\n      ],\n      \"id\": \"Role\",\n      \"name\": \"Role\",\n      \"description\": \"Role\",\n      \"endpoint\": \"/Roles\",\n      \"schema\": \"urn:boc:scim:schemas:core:2.0:Role\",\n      \"meta\": {\n        \"resourceType\": \"ResourceType\"\n      }\n    },\n    {\n      \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:ResourceType\"\n      ],\n      \"id\": \"Repo\",\n      \"name\": \"Repo\",\n      \"description\": \"Repository\",\n      \"endpoint\": \"/Repos\",\n      \"schema\": \"urn:boc:scim:schemas:core:2.0:Repo\",\n      \"meta\": {\n        \"resourceType\": \"ResourceType\"\n      }\n    },\n    {\n      \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:ResourceType\"\n      ],\n      \"id\": \"NamedUseScenario\",\n      \"name\": \"NamedUseScenario\",\n      \"description\": \"Named Use Scenario\",\n      \"endpoint\": \"/NamedUseScenarios\",\n      \"schema\": \"urn:boc:scim:schemas:core:2.0:NamedUseScenario\",\n      \"meta\": {\n        \"resourceType\": \"ResourceType\"\n      }\n    }\n  ]\n}"
+      },
+      "ScenariosResponseJSON": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:ListResponse\"\n  ],\n  \"totalResults\": 3,\n  \"Resources\": [\n    {\n      \"schemas\": [\n        \"urn:boc:scim:schemas:core:2.0:NamedUseScenario\"\n      ],\n      \"meta\": {\n        \"resourceType\": \"NamedUseScenario\"\n      },\n      \"id\": \"{14b604d1-efde-4e34-a789-46fd6ca4e9c7}\",\n      \"displayName\": \"Reviewer\"\n    },\n    {\n      \"schemas\": [\n        \"urn:boc:scim:schemas:core:2.0:NamedUseScenario\"\n      ],\n      \"meta\": {\n        \"resourceType\": \"NamedUseScenario\"\n      },\n      \"id\": \"{9c822d49-b1d7-4eb7-a519-def5509e5fbd}\",\n      \"displayName\": \"Reader\"\n    },\n    {\n      \"schemas\": [\n        \"urn:boc:scim:schemas:core:2.0:NamedUseScenario\"\n      ],\n      \"meta\": {\n        \"resourceType\": \"NamedUseScenario\"\n      },\n      \"id\": \"{a09b203e-0333-462b-a7e7-635f962d40ca}\",\n      \"displayName\": \"Common\"\n    }\n  ]\n}"
+      },
+      "SchemasJSON": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:ListResponse\"\n  ],\n  \"totalResults\": 5,\n  \"Resources\": [\n    {\n      \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:Schema\"\n      ],\n      \"id\": \"urn:ietf:params:scim:schemas:core:2.0:User\",\n      \"name\": \"User\",\n      \"description\": \"User Account\",\n      \"meta\": {\n        \"resourceType\": \"Schema\"\n      },\n      \"attributes\": [\n        {\n          \"name\": \"userName\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"description\": \"Unique identifier for the User, typically used by the user to directly authenticate to the service provider. Each User MUST include a non-empty userName value.  This identifier MUST be unique across the service provider's entire set of Users. REQUIRED.\",\n          \"required\": true,\n          \"caseExact\": true,\n          \"mutability\": \"immutable\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"server\"\n        },\n        {\n          \"name\": \"id\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"caseExact\": false,\n          \"mutability\": \"readOnly\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"global\"\n        },\n        {\n          \"name\": \"password\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"caseExact\": true,\n          \"mutability\": \"writeOnly\",\n          \"returned\": \"never\"\n        },\n        {\n          \"name\": \"ACCOUNT_DISABLED\",\n          \"type\": \"boolean\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"mutability\": \"readWrite\",\n          \"returned\": \"always\"\n        },\n        {\n          \"name\": \"MUST_CHANGE_PASSWORD\",\n          \"type\": \"boolean\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"mutability\": \"readWrite\",\n          \"returned\": \"always\"\n        },\n        {\n          \"name\": \"FORENAME\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"caseExact\": true,\n          \"mutability\": \"readWrite\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"none\"\n        },\n        {\n          \"name\": \"SURNAME\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"caseExact\": true,\n          \"mutability\": \"readWrite\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"none\"\n        },\n        {\n          \"name\": \"EMAIL\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"caseExact\": true,\n          \"mutability\": \"readWrite\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"none\"\n        },\n        {\n          \"name\": \"TELEPHONE_NUMBER\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"caseExact\": true,\n          \"mutability\": \"readWrite\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"none\"\n        },\n        {\n          \"name\": \"DESCRIPTION\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"caseExact\": true,\n          \"mutability\": \"readWrite\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"none\"\n        },\n        {\n          \"name\": \"ROOM\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"caseExact\": true,\n          \"mutability\": \"readWrite\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"none\"\n        },\n        {\n          \"name\": \"TYPE_OF_OCCUPATION\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"caseExact\": true,\n          \"mutability\": \"readWrite\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"none\"\n        },\n        {\n          \"name\": \"FORM_OF_ADDRESS\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"caseExact\": true,\n          \"mutability\": \"readWrite\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"none\"\n        },\n        {\n          \"name\": \"LOGIN_MECHANISM\",\n          \"type\": \"string\",\n          \"canonicalValues\": [\n            \"local\",\n            \"sso\"\n          ],\n          \"multiValued\": false,\n          \"required\": false,\n          \"caseExact\": false,\n          \"mutability\": \"readWrite\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"none\"\n        },\n        {\n          \"name\": \"repos\",\n          \"type\": \"complex\",\n          \"multiValued\": true,\n          \"required\": false,\n          \"returned\": \"always\",\n          \"mutability\": \"readWrite\",\n          \"subAttributes\": [\n            {\n              \"name\": \"id\",\n              \"type\": \"string\",\n              \"multiValued\": false,\n              \"caseExact\": false,\n              \"required\": true,\n              \"returned\": \"always\",\n              \"mutability\": \"readOnly\",\n              \"uniqueness\": \"global\"\n            },\n            {\n              \"name\": \"shared\",\n              \"type\": \"boolean\",\n              \"multiValued\": false,\n              \"required\": false,\n              \"returned\": \"always\",\n              \"mutability\": \"readWrite\"\n            },\n            {\n              \"name\": \"assigned\",\n              \"type\": \"boolean\",\n              \"multiValued\": false,\n              \"required\": false,\n              \"returned\": \"always\",\n              \"mutability\": \"readWrite\"\n            }\n          ]\n        },\n        {\n          \"name\": \"groups\",\n          \"type\": \"complex\",\n          \"multiValued\": true,\n          \"required\": false,\n          \"returned\": \"always\",\n          \"mutability\": \"readWrite\",\n          \"subAttributes\": [\n            {\n              \"name\": \"id\",\n              \"type\": \"string\",\n              \"multiValued\": false,\n              \"caseExact\": false,\n              \"required\": true,\n              \"returned\": \"always\",\n              \"mutability\": \"readOnly\",\n              \"uniqueness\": \"global\"\n            }\n          ]\n        },\n        {\n          \"name\": \"namedUseScenarios\",\n          \"type\": \"complex\",\n          \"multiValued\": true,\n          \"required\": false,\n          \"returned\": \"always\",\n          \"mutability\": \"readWrite\",\n          \"subAttributes\": [\n            {\n              \"name\": \"id\",\n              \"type\": \"string\",\n              \"multiValued\": false,\n              \"caseExact\": false,\n              \"required\": true,\n              \"returned\": \"always\",\n              \"mutability\": \"readOnly\",\n              \"uniqueness\": \"global\"\n            }\n          ]\n        },\n        {\n          \"name\": \"roles\",\n          \"type\": \"complex\",\n          \"multiValued\": true,\n          \"required\": false,\n          \"returned\": \"always\",\n          \"mutability\": \"readWrite\",\n          \"subAttributes\": [\n            {\n              \"name\": \"name\",\n              \"type\": \"string\",\n              \"multiValued\": false,\n              \"caseExact\": true,\n              \"required\": true,\n              \"returned\": \"always\",\n              \"mutability\": \"readOnly\",\n              \"uniqueness\": \"none\"\n            },\n            {\n              \"name\": \"mfbID\",\n              \"type\": \"string\",\n              \"multiValued\": false,\n              \"caseExact\": false,\n              \"required\": false,\n              \"returned\": \"default\",\n              \"mutability\": \"readOnly\",\n              \"uniqueness\": \"none\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:Schema\"\n      ],\n      \"id\": \"urn:ietf:params:scim:schemas:core:2.0:Group\",\n      \"name\": \"Group\",\n      \"description\": \"User Group\",\n      \"meta\": {\n        \"resourceType\": \"Schema\"\n      },\n      \"attributes\": [\n        {\n          \"name\": \"displayName\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"description\": \"Unique identifier for the user group. This identifier MUST be unique in the group it belongs to. REQUIRED.\",\n          \"required\": true,\n          \"caseExact\": true,\n          \"mutability\": \"readWrite\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"none\"\n        },\n        {\n          \"name\": \"id\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"caseExact\": false,\n          \"mutability\": \"readOnly\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"global\"\n        },\n        {\n          \"name\": \"parentGroupID\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"returned\": \"always\",\n          \"required\": false,\n          \"mutability\": \"immutable\",\n          \"uniqueness\": \"none\"\n        },\n        {\n          \"name\": \"members\",\n          \"type\": \"complex\",\n          \"multiValued\": true,\n          \"description\": \"A list of members of the Group.\",\n          \"required\": false,\n          \"returned\": \"always\",\n          \"subAttributes\": [\n            {\n              \"name\": \"value\",\n              \"type\": \"string\",\n              \"multiValued\": false,\n              \"description\": \"Identifier of the member of this Group.\",\n              \"required\": true,\n              \"caseExact\": false,\n              \"mutability\": \"readOnly\",\n              \"returned\": \"always\",\n              \"uniqueness\": \"global\"\n            },\n            {\n              \"name\": \"type\",\n              \"type\": \"string\",\n              \"multiValued\": false,\n              \"description\": \"A label indicating the type of resource, e.g., 'User' or 'Group'.\",\n              \"required\": false,\n              \"caseExact\": true,\n              \"canonicalValues\": [\n                \"User\",\n                \"Group\"\n              ],\n              \"mutability\": \"readOnly\",\n              \"returned\": \"always\",\n              \"uniqueness\": \"none\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:Schema\"\n      ],\n      \"id\": \"urn:boc:scim:schemas:core:2.0:Repo\",\n      \"name\": \"Repo\",\n      \"description\": \"Repository\",\n      \"meta\": {\n        \"resourceType\": \"Schema\"\n      },\n      \"attributes\": [\n        {\n          \"name\": \"id\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"description\": \"Unique identifier for the repo\",\n          \"required\": false,\n          \"caseExact\": false,\n          \"mutability\": \"readOnly\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"global\"\n        },\n        {\n          \"name\": \"displayName\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"caseExact\": true,\n          \"required\": true,\n          \"returned\": \"always\",\n          \"mutability\": \"readWrite\",\n          \"uniqueness\": \"server\"\n        }\n      ]\n    },\n    {\n      \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:Schema\"\n      ],\n      \"id\": \"urn:boc:scim:schemas:core:2.0:Role\",\n      \"name\": \"Role\",\n      \"description\": \"Role\",\n      \"meta\": {\n        \"resourceType\": \"Schema\"\n      },\n      \"attributes\": [\n        {\n          \"name\": \"name\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"caseExact\": true,\n          \"required\": true,\n          \"returned\": \"always\",\n          \"mutability\": \"immutable\",\n          \"uniqueness\": \"none\"\n        },\n        {\n          \"name\": \"mfbID\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"caseExact\": false,\n          \"required\": false,\n          \"returned\": \"default\",\n          \"mutability\": \"immutable\",\n          \"uniqueness\": \"none\"\n        }\n      ]\n    },\n    {\n      \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:Schema\"\n      ],\n      \"id\": \"urn:boc:scim:schemas:core:2.0:NamedUseScenario\",\n      \"name\": \"NamedUseScenarios\",\n      \"description\": \"Named use scenarios\",\n      \"meta\": {\n        \"resourceType\": \"Schema\"\n      },\n      \"attributes\": [\n        {\n          \"name\": \"id\",\n          \"type\": \"string\",\n          \"multiValued\": false,\n          \"required\": false,\n          \"caseExact\": false,\n          \"mutability\": \"readOnly\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"global\"\n        },\n        {\n          \"name\": \"displayName\",\n          \"type\": \"string\",\n          \"required\": true,\n          \"caseExact\": true,\n          \"mutability\": \"immutable\",\n          \"returned\": \"always\",\n          \"uniqueness\": \"server\"\n        }\n      ]\n    }\n  ]\n}"
+      },
+      "ServiceProviderResponseJSON": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig\"\n  ],\n  \"patch\": {\n    \"supported\": true\n  },\n  \"bulk\": {\n    \"supported\": false,\n    \"maxOperations\": 0,\n    \"maxPayloadSize\": 0\n  },\n  \"filter\": {\n    \"supported\": true,\n    \"maxResults\": 1\n  },\n  \"changePassword\": {\n    \"supported\": true\n  },\n  \"sort\": {\n    \"supported\": false\n  },\n  \"etag\": {\n    \"supported\": false\n  },\n  \"authenticationSchemes\": [\n    {\n      \"name\": \"OAuth Bearer Token\",\n      \"description\": \"Authentication scheme using the OAuth Bearer Token Standard\",\n      \"type\": \"oauthbearertoken\"\n    },\n    {\n      \"name\": \"OAuth 2.0\",\n      \"description\": \"Authentication scheme using the OAuth 2.0 authentication\",\n      \"type\": \"oauth2\"\n    },\n    {\n      \"name\": \"HTTP Basic\",\n      \"description\": \"Authentication scheme using the HTTP Basic Standard\",\n      \"type\": \"httpbasic\"\n    },\n    {\n      \"name\": \"JSON Web Token (JWT)\",\n      \"description\": \"Authentication scheme using the JSON Web Token (JWT) Standard\",\n      \"type\": \"jwt\"\n    },\n    {\n      \"name\": \"OpenID Connect (OIDC)\",\n      \"description\": \"Authentication scheme using OpenID Connect (OIDC)\",\n      \"type\": \"oidc\"\n    },\n    {\n      \"name\": \"Token Based Authentication\",\n      \"description\": \"Authentication scheme using BOC's proprietary authentication method\",\n      \"type\": \"tokenbased\"\n    }\n  ],\n  \"meta\": {\n    \"resourceType\": \"ServiceProviderConfig\"\n  }\n}"
+      },
+      "addAttributeGroup": {
+        "value": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"add\",\n            \"path\": \"displayName\",\n            \"value\": \"Renamed Group\"\n        },\n        {\n          \"op\": \"add\",\n          \"path\": \"members\",\n          \"value\": [\n              {\n                \"value\": \"{0af8d567-122c-4206-a402-b0262fa8955e}\",\n                \"type\": \"Group\"\n              },\n              {\n                \"value\": \"{lk34pk22-122c-4206-a402-b0262fa8955e}\",\n                \"type\": \"User\"\n              }\n          ]\n      }\n    ]\n}\n"
+      },
+      "addAttributeUser": {
+        "value": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n      {\n        \"op\": \"add\",\n        \"path\": \"EMAIL\",\n        \"value\": \"test@boc.com\"\n      },\n      {\n        \"op\": \"add\",\n        \"path\": \"groups\",\n        \"value\": [\n          {\n            \"id\": \"{227f1a76-dd6f-4c03-aed9-36e07e82a14c}\"\n          }\n        ]\n      }\n    ]\n}\n"
+      },
+      "addComplexAttributeFilterUser": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n    {\n      \"op\": \"add\",\n      \"path\": \"repos[id eq \\\"e37a8b12-9f3c-4d31-bd5b-a443fc5d5f13\\\"].shared\",\n      \"value\" : false\n    }\n  ]\n}\n"
+      },
+      "getError": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:Error\"\n  ],\n  \"status\": \"400\",\n  \"detail\": \"Password does not meet security requirements.\"\n}\n"
+      },
+      "getErrorForbidden": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:Error\"\n  ],\n  \"status\": \"403\",\n  \"detail\": \"User with ID '747018cd-1ddb-4fc6-b361-5d43798e002b' could not be accessed.\"\n}\n"
+      },
+      "putObjectUser": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n    {\n      \"op\": \"add\",\n      \"value\": {\n        \"FORENAME\": \"test\",\n        \"EMAIL\": \"my@mail.com\",\n        \"SURNAME\": \"sury\",\n        \"TELEPHONE_NUMBER\": \"0800123456\",\n        \"DESCRIPTION\": \"\",\n        \"ACCOUNT_DISABLED\": true,\n        \"repos\": [\n        ],\n        \"groups\": [\n        ],\n        \"namedUseScenarios\": [\n        ],\n        \"roles\": [\n        ]\n      }\n    }\n  ]\n}\n"
+      },
+      "removeAttributeGroup": {
+        "value": "{\n  \"schemas\": [\n      \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n      {\n          \"op\": \"remove\",\n          \"path\": \"members\",\n          \"value\": [\n              {\n                  \"value\": \"{0af8d567-122c-4206-a402-b0262fa8955e}\",\n        \"type\": \"Group\"\n              },\n        {\n                  \"value\": \"{lk34pk22-122c-4206-a402-b0262fa8955e}\",\n        \"type\": \"User\"\n              }\n          ]\n      }\n  ]\n}\n"
+      },
+      "removeAttributeUser": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n    {\n      \"op\": \"remove\",\n      \"path\": \"ACCOUNT_DISABLED\"\n    },\n    {\n      \"op\": \"remove\",\n      \"path\": \"repos\"\n    }\n  ]\n}\n"
+      },
+      "removeComplexAttributeFilterGroup": {
+        "value": "{\n  \"schemas\": [\n      \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n      {\n          \"op\": \"remove\",\n          \"path\": \"members[value eq \\\"7f4bc1a3-285e-48ae-8202-5accb43efb0e\\\"]\"\n      }\n  ]\n}\n"
+      },
+      "removeComplexAttributeFilterUser": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n  {\n    \"op\": \"remove\",\n    \"path\": \"repos[id eq \\\"013ece71-7666-48ee-95c5-bd7b71d92ea2\\\"]\"\n  },\n  {\n    \"op\": \"remove\",\n    \"path\": \"groups[id eq \\\"759c34e1-92e6-4ef5-a0b9-e3a788d33fed\\\"]\"\n  },\n  {\n    \"op\": \"remove\",\n    \"path\": \"namedUseScenarios[id eq \\\"9c822d49-b1d7-4eb7-a519-def5509e5fbd\\\"]\"\n  },\n  {\n    \"op\": \"remove\",\n    \"path\": \"roles[name eq \\\"aRole\\\" and mfbID eq \\\"6c8asd49-b1d7-4eb7-a519-def5509e5fbd\\\"]\"\n  }\n  ]\n}\n"
+      },
+      "removeObjectUser": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n    {\n      \"op\": \"remove\",\n      \"value\": {\n        \"FORENAME\": \"test\"\n      }\n    }\n  ]\n}"
+      },
+      "replaceComplexAttributeFilterUser": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n    {\n      \"op\": \"replace\",\n      \"path\": \"repos[id eq \\\"e37a8b12-9f3c-4d31-bd5b-a443fc5d5f13\\\"].shared\",\n      \"value\" : false\n    }\n  ]\n}\n"
+      },
+      "replaceComplexAttributeUser": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n    {\n      \"op\": \"replace\",\n      \"path\": \"groups\",\n      \"value\": [\n        {\n          \"id\": \"{227f1a76-dd6f-4c03-aed9-36e07e82a14c}\"\n        }\n      ]\n    }\n  ]\n}\n"
+      },
+      "replaceObjectUser": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n    {\n      \"op\": \"replace\",\n      \"value\": {\n        \"FORENAME\": \"test\",\n        \"EMAIL\": \"my@mail.com\",\n        \"SURNAME\": \"sury\",\n        \"TELEPHONE_NUMBER\": \"0800123456\",\n        \"DESCRIPTION\": \"\",\n        \"ACCOUNT_DISABLED\": true,\n        \"repos\": [\n        ],\n        \"groups\": [\n        ],\n        \"namedUseScenarios\": [\n        ],\n        \"roles\": [\n        ]\n      }\n    }\n  ]\n}\n"
+      },
+      "replaceSimpleAttributeUser": {
+        "value": "{\n  \"schemas\": [\n    \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n  ],\n  \"Operations\": [\n    {\n      \"op\": \"replace\",\n      \"path\": \"reps\",\n      \"value\": true\n    }\n  ]\n} \n"
+      }
+    },
+    "links": {},
+    "schemas": {
+      "ACCOUNT_DISABLED": {
+        "description": "Flag if the user is disabled",
+        "type": "boolean"
+      },
+      "DESCRIPTION": {
+        "description": "The description of the object",
+        "type": "string"
+      },
+      "EMAIL": {
+        "description": "Email of a user",
+        "type": "string"
+      },
+      "FORENAME": {
+        "description": "Forename of a user",
+        "type": "string"
+      },
+      "FORM_OF_ADDRESS": {
+        "description": "The used schema",
+        "type": "string"
+      },
+      "GetRepo": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/List"
+          },
+          {
+            "properties": {
+              "Resources": {
+                "items": {
+                  "$ref": "#/components/schemas/repo"
+                },
+                "type": "array"
+              }
+            }
+          }
+        ]
+      },
+      "Group": {
+        "properties": {
+          "displayName": {
+            "$ref": "#/components/schemas/displayName"
+          },
+          "id": {
+            "$ref": "#/components/schemas/id"
+          },
+          "members": {
+            "$ref": "#/components/schemas/members"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/meta"
+          },
+          "schemas": {
+            "$ref": "#/components/schemas/schemas"
+          }
+        },
+        "required": [
+          "displayName"
+        ],
+        "type": "object"
+      },
+      "LOGIN_MECHANISM": {
+        "description": "the type of login mechanism of a user",
+        "type": "string"
+      },
+      "List": {
+        "properties": {
+          "schemas": {
+            "items": {
+              "description": "Used schema",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "totalResults": {
+            "description": "numer of resaults",
+            "type": "integer"
+          }
+        },
+        "type": "object",
+        "xml": {
+          "name": "response"
+        }
+      },
+      "MUST_CHANGE_PASSWORD": {
+        "description": "Flag if the user must change password",
+        "type": "boolean"
+      },
+      "ROOM": {
+        "description": "Text that describes the room of a user",
+        "type": "string"
+      },
+      "ResourceType": {
+        "properties": {
+          "description": {
+            "$ref": "#/components/schemas/description"
+          },
+          "endpoint": {
+            "$ref": "#/components/schemas/endpoint"
+          },
+          "id": {
+            "$ref": "#/components/schemas/id"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/meta"
+          },
+          "name": {
+            "$ref": "#/components/schemas/name"
+          },
+          "schema": {
+            "$ref": "#/components/schemas/schema_2"
+          },
+          "schemas": {
+            "$ref": "#/components/schemas/schemas"
+          }
+        },
+        "type": "object"
+      },
+      "ResourceTypes": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/List"
+          },
+          {
+            "properties": {
+              "Resources": {
+                "items": {
+                  "$ref": "#/components/schemas/ResourceType"
+                },
+                "type": "array"
+              }
+            },
+            "xml": {
+              "name": "response"
+            }
+          }
+        ]
+      },
+      "Roles": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/List"
+          },
+          {
+            "properties": {
+              "Resources": {
+                "items": {
+                  "$ref": "#/components/schemas/role"
+                },
+                "type": "array"
+              }
+            }
+          }
+        ],
+        "description": "List of roles",
+        "type": "object"
+      },
+      "SURNAME": {
+        "description": "Surname of a user",
+        "type": "string"
+      },
+      "ScenariosResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/List"
+          },
+          {
+            "properties": {
+              "Resources": {
+                "items": {
+                  "$ref": "#/components/schemas/scenario"
+                },
+                "type": "array"
+              }
+            }
+          }
+        ]
+      },
+      "SchemasResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/List"
+          },
+          {
+            "properties": {
+              "Resources": {
+                "items": {
+                  "$ref": "#/components/schemas/schema"
+                },
+                "type": "array"
+              }
+            }
+          }
+        ]
+      },
+      "TELEPHONE_NUMBER": {
+        "description": "Telephone number of a user",
+        "type": "string"
+      },
+      "TYPE_OF_OCCUPATION": {
+        "description": "Text describing the type of occupation of a user",
+        "type": "string"
+      },
+      "UUID": {
+        "example": "fd4f597a-187c-459f-bb03-7ead670a370a",
+        "format": "uuid",
+        "type": "string"
+      },
+      "User": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/userStandardProperties"
+          }
+        ],
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/id"
+          }
+        },
+        "required": [
+          "userName"
+        ],
+        "type": "object"
+      },
+      "assigned": {
+        "description": "Flag if the user is assigned to this repository",
+        "type": "boolean"
+      },
+      "attributes": {
+        "properties": {
+          "caseExact": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          },
+          "multiValued": {
+            "type": "boolean"
+          },
+          "mutability": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "returned": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "uniqueness": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "authenticationSchemes": {
+        "properties": {
+          "description": {
+            "$ref": "#/components/schemas/description"
+          },
+          "name": {
+            "$ref": "#/components/schemas/name"
+          },
+          "type": {
+            "enum": [
+              "oauthbearertoken",
+              "oauth2",
+              "httpbasic",
+              "jwt",
+              "oidc",
+              "tokenbased"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "createUser": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/userStandardProperties"
+          }
+        ],
+        "properties": {
+          "password": {
+            "$ref": "#/components/schemas/password"
+          }
+        },
+        "required": [
+          "userName"
+        ],
+        "type": "object"
+      },
+      "description": {
+        "description": "The description of the object",
+        "type": "string"
+      },
+      "displayName": {
+        "description": "Name of a object that is displayed in the UI",
+        "type": "string"
+      },
+      "endpoint": {
+        "description": "Path of the endpoint",
+        "type": "string"
+      },
+      "error": {
+        "properties": {
+          "detail": {
+            "$ref": "#/components/schemas/description"
+          },
+          "schemas": {
+            "$ref": "#/components/schemas/schemas"
+          },
+          "scimType": {
+            "$ref": "#/components/schemas/scimType"
+          },
+          "status": {
+            "$ref": "#/components/schemas/errorStatus"
+          }
+        },
+        "type": "object"
+      },
+      "errorStatus": {
+        "description": "Type describing the type of error that occurred.",
+        "type": "string"
+      },
+      "filter": {
+        "example": "id eq \"a30f3475-2e21-4410-b734-b8155eb8d95e\"",
+        "format": "filter",
+        "type": "string"
+      },
+      "filter_1": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/filter"
+          },
+          {
+            "example": "id eq \"a30f3475-2e21-4410-b734-b8155eb8d95e",
+            "type": "string"
+          }
+        ]
+      },
+      "group": {
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/id"
+          }
+        },
+        "type": "object"
+      },
+      "group_id": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/UUID"
+          },
+          {
+            "example": "3c944389-eb3d-438e-a2d8-7b1c7513144c",
+            "type": "string"
+          }
+        ]
+      },
+      "groups": {
+        "description": "List of groups of a user is assigned to",
+        "items": {
+          "$ref": "#/components/schemas/group"
+        },
+        "type": "array"
+      },
+      "id": {
+        "description": "ID of a object",
+        "type": "string"
+      },
+      "member": {
+        "description": "Member of a group with its ID saved in value and type",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/memberType"
+          },
+          "value": {
+            "$ref": "#/components/schemas/value"
+          }
+        },
+        "type": "object"
+      },
+      "memberType": {
+        "description": "Type describing the Member of a group that can be either Group or User",
+        "enum": [
+          "Group",
+          "User"
+        ],
+        "type": "string"
+      },
+      "members": {
+        "description": "Members of a group",
+        "items": {
+          "$ref": "#/components/schemas/member"
+        },
+        "type": "array"
+      },
+      "meta": {
+        "properties": {
+          "resourceType": {
+            "description": "Information about resource type",
+            "enum": [
+              "Repo",
+              "User",
+              "Group",
+              "Role",
+              "NamedUseScenario",
+              "Schema",
+              "ResourceType"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "mfbID": {
+        "description": "the ID of an MFB",
+        "type": "string"
+      },
+      "modifyAttribute": {
+        "properties": {
+          "Operations": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "schemas": {
+            "$ref": "#/components/schemas/schemas"
+          }
+        },
+        "required": [
+          "Operations",
+          "schemas"
+        ],
+        "type": "object"
+      },
+      "name": {
+        "description": "Name of a object",
+        "type": "string"
+      },
+      "namedUseScenario": {
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/id"
+          }
+        },
+        "type": "object"
+      },
+      "namedUseScenarios": {
+        "description": "List of namedUseScenarios of a user is assigned to",
+        "items": {
+          "$ref": "#/components/schemas/namedUseScenario"
+        },
+        "type": "array"
+      },
+      "password": {
+        "description": "the password of a user",
+        "type": "string"
+      },
+      "providers": {
+        "properties": {
+          "authenticationSchemes": {
+            "$ref": "#/components/schemas/authenticationSchemes"
+          },
+          "bulk": {
+            "$ref": "#/components/schemas/providers_bulk"
+          },
+          "changePassword": {
+            "$ref": "#/components/schemas/providers_patch"
+          },
+          "etag": {
+            "$ref": "#/components/schemas/providers_patch"
+          },
+          "filter": {
+            "$ref": "#/components/schemas/providers_filter"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/meta"
+          },
+          "patch": {
+            "$ref": "#/components/schemas/providers_patch"
+          },
+          "schemas": {
+            "$ref": "#/components/schemas/schemas"
+          },
+          "sort": {
+            "$ref": "#/components/schemas/providers_patch"
+          }
+        },
+        "type": "object"
+      },
+      "providers_bulk": {
+        "properties": {
+          "maxOperations": {
+            "type": "integer"
+          },
+          "maxPayloadSize": {
+            "type": "integer"
+          },
+          "supported": {
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "providers_filter": {
+        "properties": {
+          "maxResults": {
+            "type": "integer"
+          },
+          "supported": {
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "providers_patch": {
+        "properties": {
+          "supported": {
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "repo": {
+        "properties": {
+          "displayName": {
+            "$ref": "#/components/schemas/displayName"
+          },
+          "id": {
+            "$ref": "#/components/schemas/id"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/meta"
+          },
+          "schemas": {
+            "$ref": "#/components/schemas/schemas"
+          }
+        },
+        "type": "object"
+      },
+      "repo_2": {
+        "properties": {
+          "assigned": {
+            "$ref": "#/components/schemas/assigned"
+          },
+          "id": {
+            "$ref": "#/components/schemas/id"
+          },
+          "shared": {
+            "$ref": "#/components/schemas/shared"
+          }
+        },
+        "type": "object"
+      },
+      "repos": {
+        "description": "List of repositories of a user is assigned and shared to",
+        "items": {
+          "$ref": "#/components/schemas/repo_2"
+        },
+        "type": "array"
+      },
+      "role": {
+        "properties": {
+          "displayName": {
+            "$ref": "#/components/schemas/displayName"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/meta"
+          },
+          "name": {
+            "$ref": "#/components/schemas/name"
+          },
+          "schemas": {
+            "$ref": "#/components/schemas/schemas"
+          }
+        },
+        "type": "object"
+      },
+      "role_2": {
+        "properties": {
+          "mfbID": {
+            "$ref": "#/components/schemas/mfbID"
+          },
+          "name": {
+            "$ref": "#/components/schemas/name"
+          }
+        },
+        "type": "object"
+      },
+      "roles": {
+        "description": "List of roles of a user is assigned to",
+        "items": {
+          "$ref": "#/components/schemas/role_2"
+        },
+        "type": "array"
+      },
+      "scenario": {
+        "properties": {
+          "displayName": {
+            "$ref": "#/components/schemas/displayName"
+          },
+          "id": {
+            "$ref": "#/components/schemas/id"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/meta"
+          },
+          "schemas": {
+            "$ref": "#/components/schemas/schemas"
+          }
+        },
+        "type": "object"
+      },
+      "schema": {
+        "properties": {
+          "attributes": {
+            "$ref": "#/components/schemas/attributes"
+          },
+          "description": {
+            "$ref": "#/components/schemas/description"
+          },
+          "id": {
+            "$ref": "#/components/schemas/id"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/meta"
+          },
+          "name": {
+            "$ref": "#/components/schemas/name"
+          },
+          "schemas": {
+            "$ref": "#/components/schemas/schemas"
+          }
+        },
+        "type": "object"
+      },
+      "schema_2": {
+        "description": "The used schema",
+        "type": "string"
+      },
+      "schemas": {
+        "items": {
+          "description": "Used schemas",
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "scimType": {
+        "description": "Type of scim error if defined",
+        "type": "string"
+      },
+      "shared": {
+        "description": "Flag if the user is shared to this repository",
+        "type": "boolean"
+      },
+      "userName": {
+        "description": "The unique nam of a user",
+        "type": "string"
+      },
+      "userStandardProperties": {
+        "properties": {
+          "ACCOUNT_DISABLED": {
+            "$ref": "#/components/schemas/ACCOUNT_DISABLED"
+          },
+          "DESCRIPTION": {
+            "$ref": "#/components/schemas/DESCRIPTION"
+          },
+          "EMAIL": {
+            "$ref": "#/components/schemas/EMAIL"
+          },
+          "FORENAME": {
+            "$ref": "#/components/schemas/FORENAME"
+          },
+          "FORM_OF_ADDRESS": {
+            "$ref": "#/components/schemas/FORM_OF_ADDRESS"
+          },
+          "LOGIN_MECHANISM": {
+            "$ref": "#/components/schemas/LOGIN_MECHANISM"
+          },
+          "MUST_CHANGE_PASSWORD": {
+            "$ref": "#/components/schemas/MUST_CHANGE_PASSWORD"
+          },
+          "ROOM": {
+            "$ref": "#/components/schemas/ROOM"
+          },
+          "SURNAME": {
+            "$ref": "#/components/schemas/SURNAME"
+          },
+          "TELEPHONE_NUMBER": {
+            "$ref": "#/components/schemas/TELEPHONE_NUMBER"
+          },
+          "TYPE_OF_OCCUPATION": {
+            "$ref": "#/components/schemas/TYPE_OF_OCCUPATION"
+          },
+          "groups": {
+            "$ref": "#/components/schemas/groups"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/meta"
+          },
+          "namedUseScenarios": {
+            "$ref": "#/components/schemas/namedUseScenarios"
+          },
+          "repos": {
+            "$ref": "#/components/schemas/repos"
+          },
+          "roles": {
+            "$ref": "#/components/schemas/roles"
+          },
+          "schemas": {
+            "$ref": "#/components/schemas/schemas"
+          },
+          "userName": {
+            "$ref": "#/components/schemas/userName"
+          }
+        },
+        "type": "object"
+      },
+      "user_id": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/UUID"
+          },
+          {
+            "example": "7445346e-2982-4b52-9c4c-2a51e8b62493",
+            "type": "string"
+          }
+        ]
+      },
+      "value": {
+        "description": "Name of a object that is displayed in the UI",
+        "type": "string"
+      }
+    },
+    "securitySchemes": {
+      "BasicAuth": {
+        "scheme": "basic",
+        "type": "http"
+      },
+      "oAuth2": {
+        "description": "ADOxx OAuth",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "http://localhost:8080/ADOxxWeb/oauth2/authorize",
+            "refreshUrl": "http://localhost:8080/ADOxxWeb/oauth2/token",
+            "scopes": {},
+            "tokenUrl": "http://localhost:8080/ADOxxWeb/oauth2/token"
+          }
+        },
+        "type": "oauth2"
+      }
+    }
+  },
+  "info": {
+    "description": "SCIM interfaces to manage User and Groups.\n",
+    "title": "SCIM interfaces documentation",
+    "version": "2.0.0"
+  },
+  "openapi": "3.0.2",
+  "paths": {
+    "/scim/2.0/Groups": {
+      "post": {
+        "description": "Endpoint for creating a user group\n",
+        "operationId": "createUserGroup",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "jsonExample": {
+                  "$ref": "#/components/examples/GetUsergroupJSON"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/Group"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "jsonExample": {
+                    "$ref": "#/components/examples/GetUsergroupJSON"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Group"
+                }
+              }
+            },
+            "description": "JSON of User Group data"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/getError"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "SCIM Error format"
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) No access to that action"
+          },
+          "404": {
+            "description": "(Not Found) Some of the referenced resources do not exist"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Creates a new group",
+        "tags": [
+          "Groups"
+        ]
+      }
+    },
+    "/scim/2.0/Groups/{filter}": {
+      "get": {
+        "description": "Endpoint for retriving user group\n",
+        "operationId": "getUserGroupByFilter",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Filter conditions",
+            "in": "path",
+            "name": "filter",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/filter_1"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "jsonExample": {
+                    "$ref": "#/components/examples/GetUsergroupJSON"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Group"
+                }
+              }
+            },
+            "description": "JSON of User Group data"
+          },
+          "401": {
+            "description": "(Unauthorized Access) Your request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) You don't have access to that action"
+          },
+          "404": {
+            "description": "(Not found) The passed group does not exist"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Get a group data by filter",
+        "tags": [
+          "Groups"
+        ]
+      }
+    },
+    "/scim/2.0/Groups/{group_id}": {
+      "delete": {
+        "description": "Endpoint for deleting user group",
+        "operationId": "deleteUserGroup",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "UUID of user group",
+            "in": "path",
+            "name": "group_id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/group_id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Group deleted successfully."
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) No access to that action"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/getError"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "(Not Found) Some of the referenced resources do not exist"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Removes a group by ID",
+        "tags": [
+          "Groups"
+        ]
+      },
+      "get": {
+        "description": "Endpoint for retriving user group\n",
+        "operationId": "getUserGroup",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "UUID of user group",
+            "in": "path",
+            "name": "group_id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/group_id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "jsonExample": {
+                    "$ref": "#/components/examples/GetUsergroupJSON"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Group"
+                }
+              }
+            },
+            "description": "JSON of User Group data"
+          },
+          "401": {
+            "description": "(Unauthorized Access) Your request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) You don't have access to that action"
+          },
+          "404": {
+            "description": "(Not found) The passed group does not exist"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Get a group by ID",
+        "tags": [
+          "Groups"
+        ]
+      },
+      "patch": {
+        "description": "Endpoint for modifying data of a user group.\n\nAn \"add\" operation is interpreted as:\n  - If the member to be added is a user\n    - The user is assigned to the group in addition to the group(s) they are already in.\n    - If the user prior to the PATCH operation is only the \"SCIM Default User Group\", then they are removed from it.\n  - If the member to be added is a group\n    - The group is moved\n\nA \"replace\" is not supported.\n\nA \"remove\" operation is interpreted as:\n  - If the member to be removed is a user\n    - The user is removed from the group.\n    - If prior to the PATCH operation the group is the only one that the user is in, then they get moved to \"SCIM Default User Group\"\n  - If the member to be removed is a group\n    - The group is deleted.\n    - The users in the group and its subgroups are unassigned from the group and its subgroup(s)\n    If prior to the PATCH operation the group is the only one that the user is in, then they get moved to \"SCIM Default User Group\".\n            \n",
+        "operationId": "updateUserGroup",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "UUID of the user",
+            "in": "path",
+            "name": "user_id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/user_id"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "Add attribute": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/addAttributeGroup"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/modifyAttribute"
+              }
+            },
+            "Remove Complex attribute with filter": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/removeComplexAttributeFilterGroup"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/modifyAttribute"
+              }
+            },
+            "Remove attribute": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/removeAttributeGroup"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/modifyAttribute"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/GetUsergroupJSON"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Group"
+                }
+              }
+            },
+            "description": "JSON of group data."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/getError"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "SCIM Error format"
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/getErrorForbidden"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "(Forbidden) No access to that action"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Changing the data of an existing group",
+        "tags": [
+          "Groups"
+        ]
+      },
+      "put": {
+        "description": "Endpoint for renaming a user group\n",
+        "operationId": "renameUserGroup",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "UUID of user group",
+            "in": "path",
+            "name": "group_id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/group_id"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "jsonExample": {
+                  "$ref": "#/components/examples/GetUsergroupJSON"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/Group"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/GetUser"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            },
+            "description": "JSON of group data."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/getError"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "SCIM Error format"
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/getErrorForbidden"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "(Forbidden) No access to that action"
+          },
+          "404": {
+            "description": "(Not Found) Some of the referenced resources do not exist"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "renames a group",
+        "tags": [
+          "Groups"
+        ]
+      }
+    },
+    "/scim/2.0/NamedUseScenarios": {
+      "get": {
+        "description": "Endpoint for retrieving information about scenarios",
+        "operationId": "getScenarios",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/ScenariosResponseJSON"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ScenariosResponse"
+                }
+              }
+            },
+            "description": "JSON containing a list of scenarios and if they are enabled"
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) No access to that action"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Get scenarios",
+        "tags": [
+          "Scenarios"
+        ]
+      }
+    },
+    "/scim/2.0/Repos": {
+      "get": {
+        "description": "Endpoint for retrieving a list of repositories",
+        "operationId": "getRepos",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/GetRepoJSON"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/GetRepo"
+                }
+              }
+            },
+            "description": "JSON with a list of all repositories."
+          },
+          "401": {
+            "description": "(Unauthorized Access) Your request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) You don't have access to that action"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Gets Repositories",
+        "tags": [
+          "Repositories"
+        ]
+      }
+    },
+    "/scim/2.0/ResourceTypes": {
+      "get": {
+        "description": "Endpoint for retrieving information about ResourceTypes",
+        "operationId": "getResourceTypes",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/ResourceTypesJSON"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/ResourceTypes"
+                }
+              }
+            },
+            "description": "JSON response with the information of the ResourceTypes that are available."
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) No access to that action"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Get ResourceTypes",
+        "tags": [
+          "ResourceTypes"
+        ]
+      }
+    },
+    "/scim/2.0/Roles": {
+      "get": {
+        "operationId": "getRoles",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "RolesResponse": {
+                    "$ref": "#/components/examples/GetRolesJSON"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/Roles"
+                }
+              }
+            },
+            "description": "JSON consisting Role grouping items with its available attributes."
+          },
+          "401": {
+            "description": "(Unauthorized Access) Your request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) You don't have access to that action"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Retrieve list of available roles",
+        "tags": [
+          "Roles"
+        ]
+      }
+    },
+    "/scim/2.0/Schemas": {
+      "get": {
+        "description": "Endpoint for retrieving information about Schemas",
+        "operationId": "getSchemas",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/SchemasJSON"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/SchemasResponse"
+                }
+              }
+            },
+            "description": "JSON containing a list of Schemas and contained attributes."
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) No access to that action"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Get Schemas",
+        "tags": [
+          "Schemas"
+        ]
+      }
+    },
+    "/scim/2.0/ServiceProviderConfig": {
+      "get": {
+        "description": "Endpoint for retrieving information about the Service Provider Config.",
+        "operationId": "getServiceProviderConfig",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/ServiceProviderResponseJSON"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/providers"
+                }
+              }
+            },
+            "description": "JSON describing the supported SCIM Features and available authentication methods."
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) No access to that action"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Get Service Provider Config of the SCIM service",
+        "tags": [
+          "ServiceProviderConfig"
+        ]
+      }
+    },
+    "/scim/2.0/Users": {
+      "post": {
+        "description": "Endpoint for creating a new user based on the passed JSON data.",
+        "operationId": "createUser",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/CreateUser"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/createUser"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/GetUser"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            },
+            "description": "JSON of user data."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/getError"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "SCIM Error format"
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) No access to that action"
+          },
+          "404": {
+            "description": "(Not Found) Some of the referenced resources do not exist"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Creates a new user",
+        "tags": [
+          "Users"
+        ]
+      }
+    },
+    "/scim/2.0/Users/{filter}": {
+      "get": {
+        "description": "Endpoint for retrieving information about a user that matches the filter criteria.",
+        "operationId": "getUserByFilter",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Filter conditions",
+            "in": "path",
+            "name": "filter",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/filter_1"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/GetUser"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            },
+            "description": "JSON of user data."
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) No access to that action"
+          },
+          "404": {
+            "description": "(Not Found) Some of the referenced resources do not exist"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Get user data",
+        "tags": [
+          "Users"
+        ]
+      }
+    },
+    "/scim/2.0/Users/{user_id}": {
+      "delete": {
+        "description": "Endpoint for removing a user if found by the provided ID.",
+        "operationId": "deleteUser",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "UUID of the user",
+            "in": "path",
+            "name": "user_id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/user_id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "User deleted successfully."
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) No access to that action"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/getError"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "(Not Found) Some of the referenced resources do not exist"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Removes a user if found by the provided ID",
+        "tags": [
+          "Users"
+        ]
+      },
+      "get": {
+        "description": "Endpoint for retrieving information about a user.",
+        "operationId": "getUserByID",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "UUID of the user",
+            "in": "path",
+            "name": "user_id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/user_id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/GetUser"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            },
+            "description": "JSON of user data."
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "description": "(Forbidden) No access to that action"
+          },
+          "404": {
+            "description": "(Not Found) Some of the referenced resources do not exist"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Get user data",
+        "tags": [
+          "Users"
+        ]
+      },
+      "patch": {
+        "description": "Endpoint for modifying data of a user.\n\nAn \"add\" operation is interpreted as:\n  - Simple attributes (including those of complex attributes): replacing the value.\n  - Complex attributes: interpreted as\n    - Assigning and/or sharing a repo to/with a user\n    - Assigning a user to a group\n    - Assigning a named use scenario to a user\n    - Assigning a role to a user\n\nA \"replace\" is interpreted as a \"hard set\" of attributes:\n  - Simple attributes (including those of complex attributes): replacing the value\n  - Complex attributes: interpreted as\n    - Assigning and/or sharing a repo to/with a user of the repos that are specified in the request.\n      If the user is assigned and/or shared to other repos, then the user must be unassigned/unshared from these repos.\n      An empty array is interpreted as unassigning and unsharing from all repos.\n    - Assigning a user to a group that are specified in the request.\n      If the user is assigned to other groups, then the user must be unassigned from these groups.\n      An empty array is interpreted as assigning the user to the \"SCIM Default User Group\".\n      If the user is already in just the \"SCIM Default User Group\", then it fails.\n    - Assigning a named use scenario to a user.\n      If the user is assigned to other named use scenarios, then the user must be unassigned from them.\n    - Assigning a role to a user.\n      If the user is assigned to other roles, then the user must be unassigned from them\n      If an empty array is passed in \"repos\", \"roles\", or \"namedUseScenarios\", then this is interpreted as being removed from all repos/roles/named use scenarios.\nA \"remove\" operation is interpreted as:\n  - Simple attributes (including those of complex attributes): setting them to their default value (see POST Users for default behavior)\n  - Complex attributes: remove one or all assignments of repos, groups, named use scenarios, and roles\n    - \"remove\" \"groups\" is interpreted as assigning the user to the \"SCIM Default User Group\".\n      If the user is already in just the \"SCIM Default User Group\", then it fails.\n",
+        "operationId": "updateUser",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "UUID of the user",
+            "in": "path",
+            "name": "user_id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/user_id"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "Add attribute": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/addAttributeUser"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/modifyAttribute"
+              }
+            },
+            "Add complete data structure": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/putObjectUser"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/modifyAttribute"
+              }
+            },
+            "Add complex attribute with filter": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/addComplexAttributeFilterUser"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/modifyAttribute"
+              }
+            },
+            "Remove Complex attribute with filter": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/removeComplexAttributeFilterUser"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/modifyAttribute"
+              }
+            },
+            "Remove attribute": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/removeAttributeUser"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/modifyAttribute"
+              }
+            },
+            "Remove complete data structure": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/removeObjectUser"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/modifyAttribute"
+              }
+            },
+            "Replace Simple attribute": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/replaceSimpleAttributeUser"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/modifyAttribute"
+              }
+            },
+            "Replace complete data structure": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/replaceObjectUser"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/modifyAttribute"
+              }
+            },
+            "Replace complex attribute": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/replaceComplexAttributeUser"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/modifyAttribute"
+              }
+            },
+            "Replace complex attribute with filter": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/replaceComplexAttributeFilterUser"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/modifyAttribute"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/GetUser"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            },
+            "description": "JSON of user data."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/getError"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "SCIM Error format"
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/getErrorForbidden"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "(Forbidden) No access to that action"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Updates the user data",
+        "tags": [
+          "Users"
+        ]
+      },
+      "put": {
+        "description": "Endpoint for adding data to a user.",
+        "operationId": "updateUserPUT",
+        "parameters": [
+          {
+            "description": "Accept-Language header with ISO 639-1 language code\n\n_Default: en_\n",
+            "in": "header",
+            "name": "Accept-Language",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "UUID of the user",
+            "in": "path",
+            "name": "user_id",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/user_id"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "examples": {
+                "JSONExample": {
+                  "$ref": "#/components/examples/GetUser"
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/GetUser"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            },
+            "description": "JSON of user data."
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/getError"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "SCIM Error format"
+          },
+          "401": {
+            "description": "(Unauthorized Access) Request lacks valid authentication credentials"
+          },
+          "403": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "JSONExample": {
+                    "$ref": "#/components/examples/getErrorForbidden"
+                  }
+                },
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            },
+            "description": "(Forbidden) No access to that action"
+          },
+          "404": {
+            "description": "(Not Found) Some of the referenced resources do not exist"
+          },
+          "500": {
+            "description": "(Internal Server Error) An unexpected server issue was encountered"
+          }
+        },
+        "summary": "Updates the user data",
+        "tags": [
+          "Users"
+        ]
+      }
+    }
+  },
+  "security": [
+    {
+      "BasicAuth": []
+    },
+    {
+      "oAuth2": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "http://{hostname}/{rootPath}",
+      "variables": {
+        "hostname": {
+          "default": "localhost:8080"
+        },
+        "rootPath": {
+          "default": "ADOxxWeb"
+        }
+      }
+    },
+    {
+      "url": "https://{hostname}/{rootPath}",
+      "variables": {
+        "hostname": {
+          "default": "localhost:8080"
+        },
+        "rootPath": {
+          "default": "ADOxxWeb"
+        }
+      }
+    }
+  ]
+}
