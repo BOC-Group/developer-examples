@@ -1,4 +1,4 @@
 python-dotenv==1.1.0
 Requests==2.32.4
 openai==1.85.0
-mcp[cli]==1.9.3
+mcp[cli]>=1.10.0
