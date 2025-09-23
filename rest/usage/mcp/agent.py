@@ -9,7 +9,8 @@ import os
 from datetime import datetime
 
 load_dotenv() # Make sure to fill your credentials in the .env.template file and rename to .env
-server = os.environ.get('adoxx_server_file')
+server= "server.py" # Path to server file (relative to agent's working directory or absolute)
+
 start_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 log_directory = "logs" # Path to the folder to save logs in
 os.makedirs(log_directory, exist_ok=True)
@@ -61,8 +62,8 @@ async def main():
                     messages = [{
                         "role": "system",
                         "content": (
-                            "You are an assistant that can use tools (functions) for interacting with a repository of graphical models and associated data (e.g. BPMN, ArchiMate, etc.). "
-                            "If the user is asking a general question about a process or a task, try to use the provided tools (functions). "
+                            "You are an assistant that can use tools (functions) for interacting with a repository of graphical models (e.g. BPMN, ArchiMate, etc.). "
+                            "If the user is asking a general question about a process or an act, try to use the provided tools (functions). "
                             "You should always rather use the available tools over answering from your own general knowledge."
                             "Only use general knowledge if a tool is not suitable or available. "
                             "IMPORTANT: If you respond using general knowledge and not a tool, explicitly state this at the beginning of your reply "
