@@ -61,7 +61,6 @@ async def main():
                             "parameters": tool.inputSchema
                         }
                         functions.append(function)
-                        print(f"tool: {tool.name}")
     
                     messages = [{
                         "role": "system",
