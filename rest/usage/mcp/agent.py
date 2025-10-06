@@ -9,7 +9,7 @@ import os
 from datetime import datetime
 
 load_dotenv() # Make sure to fill your credentials in the .env.template file and rename to .env
-server= "server.py" # Path to server file (relative to agent's working directory or absolute)
+server = os.environ.get('adoxx_server_file') # Path to server file (relative to agent's working directory or absolute)
 
 start_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 log_directory = "logs" # Path to the folder to save logs in
