@@ -30,8 +30,8 @@ root_logger.addHandler(file_handler)
 
 async def main():
     try:
-        username = os.environ.get("adoxx_user");
-        password = os.environ.get("adoxx_pass");
+        username = os.environ.get("adoxx_username");
+        password = os.environ.get("adoxx_password");
         token = base64.b64encode(f"{username}:{password}".encode()).decode()
         
         headers = {"Authorization": f"Basic {token}"}
