@@ -20,7 +20,7 @@ public class GetMetamodelClasses
     
     final String sUser = "<USER>";
     final String sPass = "<PASSWORD>";
-    final String sPath = "http://<HOST>:<PORT>/ADOXX/rest/2.0/metamodel/classes";
+    final String sPath = "<BASE_URL>/rest/2.0/metamodel/classes";
     
     final HttpGet aMethod = new HttpGet (sPath);
     
