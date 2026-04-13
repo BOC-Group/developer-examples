@@ -27,7 +27,7 @@ public class CreateRelation
     final String sTrgObjectID = "<TRG_OBJECT_ID>";
     final String sDirection = "outgoing";
     final String sRelClass = "RC_EAM_COMPOSITION";
-    final String sPath = "http://<HOST>:<PORT>/ADOIT/rest/2.0/repos/" + sRepoID + "/objects/"+sSrcObjectID+"/relations/"+sDirection+"/"+sRelClass;
+    final String sPath = "<BASE_URL>/rest/2.0/repos/" + sRepoID + "/objects/"+sSrcObjectID+"/relations/"+sDirection+"/"+sRelClass;
     
     final HttpPost aMethod = new HttpPost (sPath);
     
