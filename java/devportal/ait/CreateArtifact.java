@@ -23,7 +23,7 @@ public class CreateArtifact
     final String sUser = "<USER>";
     final String sPass = "<PASSWORD>";
     final String sRepoID = "<REPO_ID>";
-    final String sPath = "http://<HOST>:<PORT>/ADOIT/rest/2.0/repos/" + sRepoID + "/objects";
+    final String sPath = "<BASE_URL>/rest/2.0/repos/" + sRepoID + "/objects";
     
     final HttpPost aMethod = new HttpPost (sPath);
     
