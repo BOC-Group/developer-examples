@@ -32,7 +32,7 @@ public class GetModelImage
     final String sRepoID = "<REPO_ID>";
     final String sModelID = "<MODEL_ID>";
     final String sFilePath = "<FILE_PATH>"; // E.g. D:\\model.png
-    String sPath = "http://<HOST>:<PORT>/ADONIS/rest/2.0/repos/" +
+    String sPath = "<BASE_URL>/rest/2.0/repos/" +
                    sRepoID +
                    "/models/" +
                    sModelID +
