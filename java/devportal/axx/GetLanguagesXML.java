@@ -20,7 +20,7 @@ public class GetLanguagesXML
     
     final String sUser = "<USER>";
     final String sPass = "<PASSWORD>";
-    final String sPath = "http://<HOST>:<PORT>/ADOXX/rest/2.0/languages";
+    final String sPath = "<BASE_URL>/rest/2.0/languages";
     
     final HttpGet aMethod = new HttpGet (sPath);
     
