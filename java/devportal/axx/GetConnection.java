@@ -15,7 +15,7 @@ public class GetConnection
   public static void main (final String [] args) throws ClientProtocolException, IOException
   {
     final CloseableHttpClient aClient = HttpClients.createDefault ();
-    final String sPath = "http://<HOST>:<PORT>/ADOXX/rest/connection";
+    final String sPath = "<BASE_URL>/rest/connection";
     
     final HttpGet aMethod = new HttpGet (sPath);
     final CloseableHttpResponse aResponse = aClient.execute (aMethod);
