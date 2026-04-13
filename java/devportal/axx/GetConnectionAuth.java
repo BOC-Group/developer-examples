@@ -31,7 +31,7 @@ public class GetConnectionAuth
     
     final String sKey = "<KEY>";
     final String sSecret = "<SECRET>";
-    final String sPath = "http://<HOST>:<PORT>/ADOXX/rest/connection/auth";
+    final String sPath = "<BASE_URL>/rest/connection/auth";
     
     final Map <String, String []> aTokenParameters = new HashMap <String, String []> ();
     
