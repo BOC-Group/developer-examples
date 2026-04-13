@@ -28,7 +28,7 @@ public class GetArtifactData
     final String sPass = "<PASSWORD>";
     final String sRepoID = "<REPO_ID>";
     final String sArtifactID = "<ARTIFACT_ID>";
-    String sPath = "http://<HOST>:<PORT>/ADOIT/rest/2.0/repos/" +
+    String sPath = "<BASE_URL>/rest/2.0/repos/" +
                    sRepoID +
                    "/objects/" +
                    sArtifactID +
