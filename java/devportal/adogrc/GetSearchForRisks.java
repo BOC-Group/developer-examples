@@ -27,7 +27,7 @@ public class GetSearchForRisks
     final String sUser = "<USER>";
     final String sPass = "<PASSWORD>";
     final String sRepoID = "<REPO_ID>";
-    String sPath = "http://<HOST>:<PORT>/ADOGRC/rest/2.0/repos/" + sRepoID + "/search?";
+    String sPath = "<BASE_URL>/rest/2.0/repos/" + sRepoID + "/search?";
     
     final List <Entry <String, String>> aSearchParameters = new ArrayList <Map.Entry <String, String>> ();
     aSearchParameters.add (new AbstractMap.SimpleEntry <> ("query",
