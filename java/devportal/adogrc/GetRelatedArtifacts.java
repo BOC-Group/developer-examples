@@ -24,7 +24,7 @@ public class GetRelatedArtifacts
     final String sObjectID = "<OBJECT_ID>";
     final String sDirection = "incoming";
     final String sRelClass = "RC_RISK_R";
-    final String sPath = "http://<HOST>:<PORT>/ADOGRC/rest/2.0/repos/" + sRepoID + "/objects/"+sObjectID+"/relations/"+sDirection+"/"+sRelClass;
+    final String sPath = "<BASE_URL>/rest/2.0/repos/" + sRepoID + "/objects/"+sObjectID+"/relations/"+sDirection+"/"+sRelClass;
     
     final HttpGet aMethod = new HttpGet(sPath);
         
