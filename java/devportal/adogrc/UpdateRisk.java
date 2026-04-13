@@ -24,7 +24,7 @@ public class UpdateRisk
     final String sPass = "<PASSWORD>";
     final String sRepoID = "<REPO_ID>";
     final String sRiskID = "<RISK_ID>";
-    final String sPath = "http://<HOST>:<PORT>/ADOGRC/rest/2.0/repos/" +
+    final String sPath = "<BASE_URL>/rest/2.0/repos/" +
                          sRepoID +
                          "/objects/" +
                          sRiskID;
